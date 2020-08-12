@@ -3,8 +3,13 @@ import './App.css';
 import 'bulma/css/bulma.css';
 import Navbar from './Components/Navbar'
 import CategoryList from './Components/CategoryList'
+require('dotenv').config();
+const apiKey = process.env.API_KEY;
 
 function App() {
+  
+  console.log(apiKey);
+
   return (
     <div>
       <Navbar />
