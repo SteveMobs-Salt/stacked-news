@@ -1,3 +1,52 @@
+# Stacked News 
+
+## Contents
+
+ - [About](https://github.com/SteveMobs-Salt/stacked-news#about)
+ - [Hackathon requirements](https://github.com/SteveMobs-Salt/stacked-news#assignment-requirements)
+ - [Tech](https://github.com/SteveMobs-Salt/stacked-news#tech)
+ - [Wireframe](https://github.com/SteveMobs-Salt/stacked-news#wireframe)
+ - [Approach](https://github.com/SteveMobs-Salt/stacked-news#approach)
+ 
+ ## About
+
+((ADD DESCRIPTION))
+
+__Note__: We have built this project as part of a two-day assignment and it's a work in progress.
+Additional features will be added.
+
+## Assignment requirements
+
+- Time period: two days.
+- Build and deploy a news app.
+
+## Tech
+
+### Frontend
+
+- [React](https://reactjs.org/)
+- [The Guardian API](https://open-platform.theguardian.com/documentation/)
+- [Bulma](https://bulma.io/)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+### Deployment
+
+- [Vercel](https://vercel.com/)
+
+## Wireframe
+This is how we have envisioned [Stacked News](https://github.com/SteveMobs-Salt/stacked-news/blob/master/wireframe%20main%20page.png).
+
+## Approach
+1. Plan frontend features with Github project's Kanban board and decide on stack.
+2. Create team accounts on Vercel and Github, and connect Github repo to Vercel.
+3. Setup boilerplate code for React and Bulma. 
+4. Test the Guardian's api and set up mock dataset.
+5. Test and implement api endpoints for the core features.
+6. Apply styling finishing touches.
+7. Final build and deployment on Vercel.
+
+__Possible extra features__: Make it possible for users to save their favourite recipes & compile selected recipe ingredients into a shopping list.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
