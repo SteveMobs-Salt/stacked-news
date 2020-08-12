@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import 'bulma/css/bulma.css';
-import Navbar from './Components/Navbar'
-import CategoryList from './Components/CategoryList'
+import Navbar from './Components/Navbar';
+import CategoryList from './Components/CategoryList';
+import NewsListItem from './Components/NewsListItem';
 require('dotenv').config();
 const apiKey = process.env.API_KEY;
 
@@ -13,7 +14,26 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="container is-narrow"><div className="columns"><CategoryList /></div></div>
+      <div className="columns is-centered mt-4">
+        <div className="column is-three-fifths">
+          <div className="container is-fluid">
+            <div className="columns is-centered">
+              <CategoryList />
+              <div className="column is-half">
+              <div className="box">
+                <NewsListItem />
+                <NewsListItem />
+                <NewsListItem />
+                <NewsListItem />
+                </div>
+              </div>
+              <div className="column is-one-quarter">
+                <div class="box">weather</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* <div>My text is long and beautiful, as, it has been well documented, are various other parts of my website. 
         My placeholder text, I think, is going to end up being very good with women. 
         Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites.
