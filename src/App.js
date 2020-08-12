@@ -5,11 +5,13 @@ import Navbar from './Components/Navbar';
 import CategoryList from './Components/CategoryList';
 import NewsListItem from './Components/NewsListItem';
 require('dotenv').config();
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 function App() {
   
-  console.log(apiKey);
+  fetch(`/search?q=12%20years%20a%20slave&format=json&tag=film/film,tone/reviews&from-date=2010-01-01&show-tags=contributor&show-fields=starRating,headline,thumbnail,short-url&show-refinements=all&order-by=relevance&api-key=${apiKey}`)
+  .then( res=> res.text())
+  .then( data => console.log(data))
 
   return (
     <div>
