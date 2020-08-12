@@ -16,7 +16,7 @@ function CategoryList() {
         <aside className="menu">
           <p className="menu-label">General</p>
           <ul className="menu-list">
-            {categories.map(category => <li><a>{category[0].toUpperCase() + category.slice(1)}</a></li>)}
+            {categories.map(category => <li><a href="http://">{category[0].toUpperCase() + category.slice(1)}</a></li>)}
           </ul>
         </aside>
       </div>

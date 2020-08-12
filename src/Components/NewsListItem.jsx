@@ -1,18 +1,44 @@
 import React from 'react';
 
-const NewsListItem = () => {
+const NewsListItem = ({ title, subline, date, img, url }) => {
+
   return (
-    <div className="box">
-      <article className="media">
-        <div className="media-content">
-          <div className="content">
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-128x128">
+            <img src={img} alt={title} />
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
             <p>
-              <strong>Coronavirus causes world war 3</strong> <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              efficitur sit amet massa fringilla egestas. Nullam condimentum
-              luctus turpis.
+              <a href={url}><strong>{title}</strong></a>
+              <br />
+              <small>{date}</small>
+              <br />
+              {subline}
             </p>
           </div>
+          <nav class="level is-mobile">
+            <div class="level-left">
+              <a href="http://" class="level-item" aria-label="reply">
+                <span class="icon is-small">
+                  <i class="fas fa-reply" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a href="http://" class="level-item" aria-label="retweet">
+                <span class="icon is-small">
+                  <i class="fas fa-retweet" aria-hidden="true"></i>
+                </span>
+              </a>
+              <a href="http://" class="level-item" aria-label="like">
+                <span class="icon is-small">
+                  <i class="fas fa-heart" aria-hidden="true"></i>
+                </span>
+              </a>
+            </div>
+          </nav>
         </div>
       </article>
     </div>

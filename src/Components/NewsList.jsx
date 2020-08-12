@@ -8,7 +8,7 @@ const NewsList = () => {
         <div>
             {results.map(newsItem =>
                 <NewsListItem title={newsItem.webTitle}
-                    subline={newsItem.fields.trailtext}
+                    subline={newsItem.fields.trailText}
                     date={newsItem.webPublicationDate}
                     img={newsItem.fields.thumbnail}
                     url={newsItem.fields.shortUrl}

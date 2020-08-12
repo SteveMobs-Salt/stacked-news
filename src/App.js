@@ -3,9 +3,7 @@ import './App.css';
 import 'bulma/css/bulma.css';
 import Navbar from './Components/Navbar';
 import CategoryList from './Components/CategoryList';
-import NewsListItem from './Components/NewsListItem';
 import NewsList from './Components/NewsList';
-import searchResult from './mockDB/searchResult';
 
 function App() {
   return (
