@@ -32,3 +32,6 @@
 
 // CATEGORY SEARCH url
 // https://content.guardianapis.com/technology?api-key=1a62e070-dc54-4b0a-8c96-c9efe8797107&show-fields=thumbnail
+
+//ALL FIELDS SEARCH
+//https://content.guardianapis.com/search?q=12%20years%20a%20slave&format=json&tag=film/film,tone/reviews&from-date=2010-01-01&show-tags=contributor&show-fields=all&show-refinements=all&order-by=relevance&api-key=1a62e070-dc54-4b0a-8c96-c9efe8797107
