@@ -45,7 +45,7 @@ This is how we have envisioned [Stacked News](https://github.com/SteveMobs-Salt/
 6. Apply styling finishing touches.
 7. Final build and deployment on Vercel.
 
-__Possible extra features__: Make it possible for users to save their favourite recipes & compile selected recipe ingredients into a shopping list.
+__Possible extra features__: ADD
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
