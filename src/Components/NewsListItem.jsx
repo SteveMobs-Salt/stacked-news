@@ -20,7 +20,7 @@ const NewsListItem = ({ title, subline, date, img, url }) => {
               <br />
               </p>
               <p>
-              {subline}
+              {subline.replace(/<strong>|<br>|<\/strong>/g, '')}
               </p>
           </div>
         </div>
