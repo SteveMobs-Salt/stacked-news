@@ -29,9 +29,9 @@ function Navbar({setSearch}) {
         <div className="navbar-start">
           <a className="navbar-item">Home</a>
 
-          <a className="navbar-item">Documentation</a>
+          <a className="navbar-item">About</a>
 
-          <div className="navbar-item has-dropdown is-hoverable">
+          {/* <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">More</a>
 
             <div className="navbar-dropdown">
@@ -40,8 +40,8 @@ function Navbar({setSearch}) {
               <a className="navbar-item">Contact</a>
               <hr className="navbar-divider" />
               <a className="navbar-item">Report an issue</a>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
       <SearchBar setSearch={setSearch}/>
       </div>
