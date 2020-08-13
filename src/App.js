@@ -16,8 +16,6 @@ function App() {
     setNews(newsResults[0].response.results);
   },[]);
 
-
-
   useEffect(() => {
     if (category !== 'international') {
       fetchCategoryNews();
@@ -25,7 +23,7 @@ function App() {
   }, [category])
   
   const fetchCategoryNews = () => {
-    fetch(`/${category}?api-key=${process.env.REACT_APP_API_KEY}&show-fields=all`)
+    fetch(`/api/category?category=${category}`)
       .then(res => res.json())
       .then(data => setNews(data.response.results))
       .catch(err => console.log(err))
