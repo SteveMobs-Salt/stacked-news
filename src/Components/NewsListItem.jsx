@@ -4,15 +4,15 @@ import moment from 'moment';
 const NewsListItem = ({ title, subline, date, img, url }) => {
 
   return (
-    <div class="box">
-      <article class="media">
-        <div class="media-left">
-          <figure class="image is-128x128 is-5by4">
+    <div className="box">
+      <article className="media">
+        <div className="media-left">
+          <figure className="newsImage">
             <img src={img} alt={title} />
           </figure>
         </div>
-        <div class="media-content">
-          <div class="content">
+        <div className="media-content">
+          <div className="content">
             <p>
               <a href={url}><strong>{title}</strong></a>
               <br />
