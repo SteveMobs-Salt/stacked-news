@@ -29,6 +29,12 @@ function App() {
         })
         .catch(err => console.log('error from react= ', err));
     };
+    if (category !== 'international') {
+      fetchCategoryNews();
+    }
+  }, [category])
+
+  useEffect(() => {
     const fetchSearchNews = (query) => {
       // if(search.includes(' ')) {
       //   setSearch(search.replace(' ', '%20'))
@@ -47,10 +53,7 @@ function App() {
     if (search) {
       fetchSearchNews();
     }
-    if (category !== 'international') {
-      fetchCategoryNews();
-    }
-  }, [category, search]);
+  }, [search]);
 
   return (
     <div>
