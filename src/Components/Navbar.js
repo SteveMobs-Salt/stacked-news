@@ -4,12 +4,12 @@ import SearchBar from './SearchBar';
 function Navbar({setSearch}) {
   return (
     <nav
-      className="navbar has-background-primary"
+      className="navbar has-background-info"
       role="navigation"
       aria-label="main navigation"
     >
-      <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
+      <div className="navbar-brand" >
+        <a className="navbar-item has-text-white has-text-weight-bold" href="https://bulma.io">
           STACKED NEWS
         </a>
         <a
@@ -27,9 +27,9 @@ function Navbar({setSearch}) {
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item">Home</a>
+          <a className="navbar-item has-text-white">Home</a>
 
-          <a className="navbar-item">About</a>
+          <a className="navbar-item has-text-white">About</a>
 
           {/* <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">More</a>

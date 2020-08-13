@@ -9,9 +9,10 @@ require('dotenv').config();
 
 function App() {
   const [news, setNews] = useState([]);
-  const [category, setCategory] = useState('international');
+  const [category, setCategory] = useState(null);
   const [search, setSearch] = useState(null);
-
+  const [newsListTitle, setNewsListTitle] = useState('Top News');
+  const [pageNumber, setPageNumber] = useState(1)
   useEffect(() => {
     setNews(newsResults[0].response.results);
   }, []);
@@ -29,16 +30,14 @@ function App() {
         })
         .catch(err => console.log('error from react= ', err));
     };
-    if (category !== 'international') {
+    if (category) {
+      setNewsListTitle(`Category: ${category}`);
       fetchCategoryNews();
     }
-  }, [category])
+  }, [category]);
 
   useEffect(() => {
-    const fetchSearchNews = (query) => {
-      // if(search.includes(' ')) {
-      //   setSearch(search.replace(' ', '%20'))
-      // }
+    const fetchSearchNews = query => {
       fetch(`/api/search?query=${search}`)
         .then(res => {
           console.log(res);
@@ -51,6 +50,7 @@ function App() {
         .catch(err => console.log('error from react= ', err));
     };
     if (search) {
+      setNewsListTitle(`Search: ${search}`);
       fetchSearchNews();
     }
   }, [search]);
@@ -59,16 +59,17 @@ function App() {
     <div>
       <Navbar setSearch={setSearch} />
       <div className="columns is-centered mt-4">
-        <div className="column is-three-fifths">
+        <div className="column is-four-fifths">
           <div className="container is-fluid">
             <div className="columns is-centered">
               <CategoryList setCategory={setCategory} />
               <div className="column is-half">
                 <div className="box">
-                  <NewsList newsListArray={news} />
+                  <h5 class="title is-5">{newsListTitle}</h5>
+                  <NewsList newsListArray={news} pageNumber={pageNumber} setPageNumber={setPageNumber}/>
                 </div>
               </div>
-              <div className="column is-one-quarter">
+              <div className="column is-one-fifth">
                 <div className="box">asdasdasdas</div>
               </div>
             </div>
