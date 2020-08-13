@@ -3,7 +3,7 @@
 ## Contents
 
  - [About](https://github.com/SteveMobs-Salt/stacked-news#about)
- - [Hackathon requirements](https://github.com/SteveMobs-Salt/stacked-news#assignment-requirements)
+ - [Assignment requirements](https://github.com/SteveMobs-Salt/stacked-news#assignment-requirements)
  - [Tech](https://github.com/SteveMobs-Salt/stacked-news#tech)
  - [Wireframe](https://github.com/SteveMobs-Salt/stacked-news#wireframe)
  - [Approach](https://github.com/SteveMobs-Salt/stacked-news#approach)
