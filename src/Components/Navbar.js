@@ -1,6 +1,7 @@
 import React from 'react';
+import SearchBar from './SearchBar';
 
-function Navbar() {
+function Navbar({setSearch}) {
   return (
     <nav
       className="navbar has-background-primary"
@@ -28,9 +29,9 @@ function Navbar() {
         <div className="navbar-start">
           <a className="navbar-item">Home</a>
 
-          <a className="navbar-item">Documentation</a>
+          <a className="navbar-item">About</a>
 
-          <div className="navbar-item has-dropdown is-hoverable">
+          {/* <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">More</a>
 
             <div className="navbar-dropdown">
@@ -39,22 +40,10 @@ function Navbar() {
               <a className="navbar-item">Contact</a>
               <hr className="navbar-divider" />
               <a className="navbar-item">Report an issue</a>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
-
-        <div className="navbar-middle">
-          <div className="navbar-item">
-            <div className="field">
-              <p className="control has-icons-left">
-                <input className="input" type="search" placeholder="Search news" />
-                <span className="icon is-small is-left">
-                  <i className="fa fa-search"></i>
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
+      <SearchBar setSearch={setSearch}/>
       </div>
     </nav>
   );

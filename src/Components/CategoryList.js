@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CategoryList() {
+function CategoryList({setCategory}) {
   const categories = [
     'science',
     'business',
@@ -16,7 +16,7 @@ function CategoryList() {
         <aside className="menu">
           <p className="menu-label">General</p>
           <ul className="menu-list">
-            {categories.map(category => <li><a href="http://">{category[0].toUpperCase() + category.slice(1)}</a></li>)}
+            {categories.map(category => <li><a onClick={ () => setCategory(category) }>{category[0].toUpperCase() + category.slice(1)}</a></li>)}
           </ul>
         </aside>
       </div>
