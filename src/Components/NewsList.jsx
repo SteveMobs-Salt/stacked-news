@@ -1,12 +1,12 @@
 import React from 'react';
 import NewsListItem from './NewsListItem';
-import allFieldsResult from '../mockDB/allFieldsResult';
+// import allFieldsResult from '../mockDB/allFieldsResult';
 
-const NewsList = () => {
-    const results = allFieldsResult[0].response.results;
+const NewsList = ({newsListArray}) => {
+    // const results = allFieldsResult[0].response.results;
     return (
         <div>
-            {results.map(newsItem =>
+            {newsListArray.map(newsItem =>
                 <NewsListItem title={newsItem.webTitle}
                     subline={newsItem.fields.trailText}
                     date={newsItem.webPublicationDate}
