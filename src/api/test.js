@@ -1,6 +1,7 @@
 // import { NowRequest, NowResponse } from '@vercel/node';
 
 module.exports = (req, res) => {
-    const { name = 'world' } = req.query;
-    res.status(200).send(`Hello ${name}`);
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ name: 'John Doe' }))
 }
