@@ -11,14 +11,19 @@ function App() {
   useEffect(() => {
     setNews(newsResults[0].response.results);
   },[]);
+
+  const [category, setCategory] = useState('Top News');
+  
+  const [search, setSearch] = useState('');
+
   return (
     <div>
-      <Navbar />
+      <Navbar setSearch={setSearch}/>
       <div className="columns is-centered mt-4">
         <div className="column is-three-fifths">
           <div className="container is-fluid">
             <div className="columns is-centered">
-              <CategoryList />
+              <CategoryList setCategory={setCategory}/>
               <div className="column is-half">
               <div className="box">
                 <NewsList newsListArray={news}/>
