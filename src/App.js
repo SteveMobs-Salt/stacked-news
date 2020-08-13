@@ -59,7 +59,7 @@ function App() {
     <div>
       <Navbar setSearch={setSearch} />
       <div className="columns is-centered mt-4">
-        <div className="column is-three-fifths">
+        <div className="column is-four-fifths">
           <div className="container is-fluid">
             <div className="columns is-centered">
               <CategoryList setCategory={setCategory} />

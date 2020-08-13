@@ -6,6 +6,7 @@ const NewsList = ({newsListArray}) => {
     // const results = allFieldsResult[0].response.results;
     return (
         <div>
+            <h5 class="title is-5">Search:</h5>
             {newsListArray.map(newsItem =>
                 <NewsListItem title={newsItem.webTitle}
                     subline={newsItem.fields.trailText}
