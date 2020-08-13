@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@vercel/node';
+// import { NowRequest, NowResponse } from '@vercel/node';
 
 module.exports = (req, res) => {
   res.statusCode = 200
