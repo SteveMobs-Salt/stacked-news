@@ -5,16 +5,31 @@ import Navbar from './Components/Navbar';
 import CategoryList from './Components/CategoryList';
 import NewsList from './Components/NewsList';
 import newsResults from './mockDB/allFieldsResult';
+require('dotenv').config();
 
 function App() {
   const[news, setNews] = useState([]);
+  const [category, setCategory] = useState('international');
+  const [search, setSearch] = useState('');
+  
   useEffect(() => {
     setNews(newsResults[0].response.results);
   },[]);
 
-  const [category, setCategory] = useState('Top News');
+
+
+  useEffect(() => {
+    if (category !== 'international') {
+      fetchCategoryNews();
+    }
+  }, [category])
   
-  const [search, setSearch] = useState('');
+  const fetchCategoryNews = () => {
+    fetch(`/${category}?api-key=${process.env.REACT_APP_API_KEY}&show-fields=all`)
+      .then(res => res.json())
+      .then(data => setNews(data.response.results))
+      .catch(err => console.log(err))
+  }
 
   return (
     <div>
