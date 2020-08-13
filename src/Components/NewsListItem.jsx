@@ -16,10 +16,12 @@ const NewsListItem = ({ title, subline, date, img, url }) => {
             <p>
               <a href={url}><strong>{title}</strong></a>
               <br />
-              <small className="mb-3 is-italic">{moment(date).format('dddd, MMMM Do YYYY')}</small>
+              <small className="my-6 py-6 has-text-weight-medium">{moment(date).format('dddd, MMMM Do YYYY')}</small>
               <br />
+              </p>
+              <p>
               {subline}
-            </p>
+              </p>
           </div>
         </div>
       </article>
