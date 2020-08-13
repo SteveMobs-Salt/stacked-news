@@ -1,18 +1,21 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 
-function Navbar({setSearch}) {
+function Navbar({ setSearch }) {
   return (
     <nav
       className="navbar has-background-info"
       role="navigation"
       aria-label="main navigation"
     >
-      <div className="navbar-brand" >
-        <a className="navbar-item has-text-white has-text-weight-bold" href="https://bulma.io">
+      <div className="navbar-brand ml-5 pl-5">
+        <a
+          className="navbar-item has-text-white has-text-weight-bold title is-2 is-family-monospace"
+          href="#"
+        >
           STACKED NEWS
         </a>
-        <a
+        {/* <a
           role="button"
           className="navbar-burger burger"
           aria-label="menu"
@@ -22,28 +25,16 @@ function Navbar({setSearch}) {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </a> */}
       </div>
 
       <div id="navbarBasicExample" className="navbar-menu">
-        <div className="navbar-start">
+        {/* <div className="navbar-start">
           <a className="navbar-item has-text-white">Home</a>
 
           <a className="navbar-item has-text-white">About</a>
-
-          {/* <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link">More</a>
-
-            <div className="navbar-dropdown">
-              <a className="navbar-item">About</a>
-              <a className="navbar-item">Jobs</a>
-              <a className="navbar-item">Contact</a>
-              <hr className="navbar-divider" />
-              <a className="navbar-item">Report an issue</a>
-            </div> */}
-          {/* </div> */}
-        </div>
-      <SearchBar setSearch={setSearch}/>
+        </div> */}
+        <SearchBar setSearch={setSearch} />
       </div>
     </nav>
   );

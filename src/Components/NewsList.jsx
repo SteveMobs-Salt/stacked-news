@@ -2,7 +2,7 @@ import React from 'react';
 import NewsListItem from './NewsListItem';
 // import allFieldsResult from '../mockDB/allFieldsResult';
 
-const NewsList = ({ newsListArray, pageNumber, setPageNumber }) => {
+const NewsList = ({ newsListArray, pageNumber, setPageNumber, setArticleId }) => {
   // const results = allFieldsResult[0].response.results;
   return (
     <div>
@@ -13,6 +13,8 @@ const NewsList = ({ newsListArray, pageNumber, setPageNumber }) => {
           date={newsItem.webPublicationDate}
           img={newsItem.fields.thumbnail}
           url={newsItem.fields.shortUrl}
+          id={newsItem.id}
+          read={setArticleId}
         />
       ))}
 

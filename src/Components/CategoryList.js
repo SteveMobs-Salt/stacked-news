@@ -14,7 +14,7 @@ function CategoryList({setCategory}) {
     <div className="column is-one-fifth">
       <div className="box">
         <aside className="menu">
-          <p className="menu-label">Categories</p>
+          <h5 className="title is-5 ">Categories</h5>
           <ul className="menu-list">
             {categories.map(category => <li><a onClick={ () => setCategory(category) }>{category[0].toUpperCase() + category.slice(1)}</a></li>)}
           </ul>

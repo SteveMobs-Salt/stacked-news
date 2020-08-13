@@ -9,12 +9,12 @@ function SearchBar({setSearch}) {
     }
 
     return (
-        <div className="navbar-end">
+        <div className="navbar-end mr-1">
             <div className="navbar-item">
                 <div className="field">
                     <form onSubmit={event => handleSubmit(event)}>
                         <p className="control has-icons-left">
-                            <input className="input" type="search"
+                            <input className="input is-medium" type="search"
                                 placeholder="Search news"
                                 onChange={event => setContent(event.target.value)} />
                             <span className="icon is-small is-left">
