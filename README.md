@@ -13,7 +13,7 @@
 ((ADD DESCRIPTION))
 
 __Note__: We have built this project as part of a two-day assignment and it's a work in progress.
-Additional features will be added.
+Additional features may be added.
 
 ## Assignment requirements
 
