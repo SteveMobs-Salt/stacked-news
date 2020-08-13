@@ -13,9 +13,28 @@ function App() {
   const [search, setSearch] = useState(null);
   const [newsListTitle, setNewsListTitle] = useState('Top News');
   const [pageNumber, setPageNumber] = useState(1)
+  const [query, setQuery] = useState('');
   useEffect(() => {
     setNews(newsResults[0].response.results);
   }, []);
+
+  useEffect(() => {
+    const fetchQuery = () => {
+      fetch(`${query}&page=${pageNumber}`)
+        .then(res => {
+          console.log(res);
+          return res.json();
+        })
+        .then(data => {
+          console.log(data);
+          setNews(data.response.results);
+        })
+        .catch(err => console.log('error from react= ', err));
+    };
+    fetchQuery()
+  }, [pageNumber]);
+
+
 
   useEffect(() => {
     const fetchCategoryNews = () => {
@@ -32,6 +51,7 @@ function App() {
     };
     if (category) {
       setNewsListTitle(`Category: ${category}`);
+      setQuery(`/api/category?category=${category}`);
       fetchCategoryNews();
     }
   }, [category]);
@@ -51,6 +71,7 @@ function App() {
     };
     if (search) {
       setNewsListTitle(`Search: ${search}`);
+      setQuery(`/api/search?query=${search}`);
       fetchSearchNews();
     }
   }, [search]);
@@ -66,7 +87,7 @@ function App() {
               <div className="column is-half">
                 <div className="box">
                   <h5 class="title is-5">{newsListTitle}</h5>
-                  <NewsList newsListArray={news} pageNumber={pageNumber} setPageNumber={setPageNumber}/>
+                  <NewsList newsListArray={news} pageNumber={pageNumber} setPageNumber={setPageNumber} />
                 </div>
               </div>
               <div className="column is-one-fifth">
