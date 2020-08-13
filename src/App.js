@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import 'bulma/css/bulma.css';
 import Navbar from './Components/Navbar';
 import CategoryList from './Components/CategoryList';
 import NewsList from './Components/NewsList';
+import newsResults from './mockDB/allFieldsResult';
 
 function App() {
+  const[news, setNews] = useState([]);
+  useEffect(() => {
+    setNews(newsResults[0].response.results);
+  },[]);
   return (
     <div>
       <Navbar />
@@ -16,7 +21,7 @@ function App() {
               <CategoryList />
               <div className="column is-half">
               <div className="box">
-                <NewsList />
+                <NewsList newsListArray={news}/>
                 </div>
               </div>
               <div className="column is-one-quarter">
