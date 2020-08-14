@@ -7,6 +7,7 @@ import NewsList from './Components/NewsList';
 import NewsItemModal from './Components/NewsItemModal';
 import newsResults from './mockDB/allFieldsResult';
 import moment from 'moment'
+import ReactAnimatedWeather from 'react-animated-weather';
 
 require('dotenv').config();
 
@@ -28,11 +29,9 @@ function App() {
     const fetchQuery = () => {
       fetch(`${query}&page=${pageNumber}`)
         .then(res => {
-          console.log(res);
           return res.json();
         })
         .then(data => {
-          console.log(data);
           setNews(data.response.results);
         })
         .catch(err => console.log('error from react= ', err));
@@ -46,11 +45,9 @@ function App() {
     const fetchCategoryNews = () => {
       fetch(`/api/category?category=${category}`)
         .then(res => {
-          console.log(res);
           return res.json();
         })
         .then(data => {
-          console.log(data);
           setNews(data.response.results);
         })
         .catch(err => console.log('error from react= ', err));
@@ -66,11 +63,9 @@ function App() {
     const fetchSearchNews = query => {
       fetch(`/api/search?query=${search}`)
         .then(res => {
-          console.log(res);
           return res.json();
         })
         .then(data => {
-          console.log(data);
           setNews(data.response.results);
         })
         .catch(err => console.log('error from react= ', err));
@@ -87,6 +82,14 @@ function App() {
     setArticle(artlc);
   }, [articleId]);
 
+
+  const defaults = {
+    icon: 'CLEAR_DAY',
+    color: 'goldenrod',
+    size: 100,
+    animate: true
+  };
+
   return (
     <div>
       <Navbar setSearch={setSearch} />
@@ -97,7 +100,7 @@ function App() {
               <CategoryList setCategory={setCategory} />
               <div className="column is-half">
                 <div className="box">
-                  <h5 class="title is-5 has-text-left">{newsListTitle}</h5>
+                  <h5 className="title is-5 has-text-left">{newsListTitle}</h5>
                   <NewsList
                     newsListArray={news}
                     pageNumber={pageNumber}
@@ -108,8 +111,17 @@ function App() {
               </div>
               <div className="column is-one-fifth">
                 <div className="box">
-                <h5 class="title is-5  has-text-right">{moment().format('dddd, DD MMMM')}</h5>
-
+                  <div className="has-text-centered">
+                    <h5 className="title is-5  has-text-center">{moment().format('dddd, DD MMMM')}</h5>
+                    <ReactAnimatedWeather
+                      icon={defaults.icon}
+                      color={defaults.color}
+                      size={defaults.size}
+                      animate={defaults.animate}
+                    />
+                    <p>Now : 27°C</p>
+                    <p>Feels like : 30°C</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -127,13 +139,13 @@ function App() {
           url={article.webUrl}
         />
       ) : null}
-      <footer class="footer">
-        <div class="content has-text-centered">
+      <footer className="footer">
+        <div className="content has-text-centered">
           <p>
-            <strong>Bulma</strong> by{' '}
-            <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is
-            licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            <strong>Stacked News</strong> by{''}
+            <a href="https://github.com/SteveMobs-Salt/stacked-news"> Steve Mobs</a>. The source code is
+            licensed 
+            <a href="http://opensource.org/licenses/mit-license.php"> MIT</a>.
             The website content is licensed{' '}
             <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
               CC BY NC SA 4.0

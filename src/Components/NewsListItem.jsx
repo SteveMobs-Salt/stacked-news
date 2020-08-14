@@ -24,16 +24,11 @@ const NewsListItem = ({ title, subline, date, img, url, id, read }) => {
             </p>
             <p>{subline.replace(/<strong>|<br>|<\/strong>/g, '')}</p>
           </div>
-          <nav class="level is-mobile">
-            <div class="level-left">
-              <a class="level-item" aria-label="reply">
-                <span class="icon is-small">
-                  <i class="fa fa-share" aria-hidden="true"></i>
-                </span>
-              </a>
-              <a class="level-item" aria-label="like" onClick={() => read(id)}>
-                <span class="icon is-small">
-                  <i class="fa fa-book" aria-hidden="true"></i>
+          <nav className="level is-mobile">
+            <div className="level-right has-text-right">
+              <a href="# " className="level-item" aria-label="like" onClick={() => read(id)}>
+                <span className="icon is-small">
+                  <i className="fa fa-book fa-lg" aria-hidden="true"></i>
                 </span>
               </a>
             </div>

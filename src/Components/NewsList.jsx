@@ -8,7 +8,8 @@ const NewsList = ({ newsListArray, pageNumber, setPageNumber, setArticleId }) =>
     <div>
       {newsListArray.map(newsItem => (
         <NewsListItem
-          title={newsItem.webTitle}
+        key={newsItem.id}  
+        title={newsItem.webTitle}
           subline={newsItem.fields.trailText}
           date={newsItem.webPublicationDate}
           img={newsItem.fields.thumbnail}
@@ -19,11 +20,11 @@ const NewsList = ({ newsListArray, pageNumber, setPageNumber, setArticleId }) =>
       ))}
 
       <nav
-        class="pagination is-centered"
+        className="pagination is-centered"
         role="navigation"
         aria-label="pagination"
       >
-        {pageNumber > 1 ? <button class="pagination-previous button" onClick={() => setPageNumber(pageNumber-1)}>Previous</button> : <span></span>}
+        {pageNumber > 1 ? <button className="pagination-previous button" onClick={() => setPageNumber(pageNumber-1)}>Previous</button> : <span></span>}
         <button className="pagination-next button" onClick={() => setPageNumber(pageNumber+1)}>Next page</button>
       </nav>
     </div>

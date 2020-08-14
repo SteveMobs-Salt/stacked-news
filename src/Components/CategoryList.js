@@ -16,7 +16,7 @@ function CategoryList({setCategory}) {
         <aside className="menu">
           <h5 className="title is-5 ">Categories</h5>
           <ul className="menu-list">
-            {categories.map(category => <li><a onClick={ () => setCategory(category) }>{category[0].toUpperCase() + category.slice(1)}</a></li>)}
+            {categories.map(category => <li key={category}><a href="# " onClick={ () => setCategory(category) }>{category[0].toUpperCase() + category.slice(1)}</a></li>)}
           </ul>
         </aside>
       </div>

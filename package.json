@@ -12,6 +12,7 @@
     "moment": "^2.27.0",
     "node-fetch": "^2.6.0",
     "react": "^16.13.1",
+    "react-animated-weather": "^4.0.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.2",
     "react-weather": "^0.1.3"
