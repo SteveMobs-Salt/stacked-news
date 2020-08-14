@@ -10,16 +10,15 @@
  
  ## About
 
- The concept for this exercise is to create our own News App. 
- We have to use an API to get the information from the current news, but we can build it at our own taste, as long as it is dynamic.
-The intructions were to make this project in two days, as for the first day we would arrange and hardcode the layout of our app and the second day we would fetch the API information and deploy it to a cloud system.
+Stacked News is the result of a mob programming exercise to create a news app made with an external API that is deployed on the cloud.
+Stacked News uses The Guardian's API to fetch the latest news from the publication according to specific search terms and categories. We added pagination to display all results on consecutive pages. We styled our website with the Bulma CSS framework and deployed Stacked News onto Vercel.
 
 __Note__: We have built this project as part of a two-day assignment and it's a work in progress.
 Additional features may be added.
 
 ## Assignment requirements
 
-- Time period: two days.
+- Time period: two days. 
 - Build and deploy a news app.
 
 ## Tech
