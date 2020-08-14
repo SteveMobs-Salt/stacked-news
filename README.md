@@ -49,6 +49,5 @@ This is how we initially envisioned [Stacked News](https://github.com/SteveMobs-
 7. Final build and deployment on Vercel.
 
 __Possible extra features__: 
-- Add a link to the article displayed on the page. 
-- Have a Pagination System.
+- Add weather-api to fetch local weather.
 - Have a rotating carousel of the most important news on the front page.
