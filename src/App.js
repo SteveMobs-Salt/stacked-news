@@ -99,9 +99,9 @@ function App() {
             <div className="columns is-centered">
               <CategoryList setCategory={setCategory} />
               <div className="column is-half">
-                <div className="box">
+                <div className="box is-mobile-block">
                   <h5 className="title is-5 has-text-left">{newsListTitle}</h5>
-                  <NewsList
+                  <NewsList 
                     newsListArray={news}
                     pageNumber={pageNumber}
                     setPageNumber={setPageNumber}
@@ -109,7 +109,7 @@ function App() {
                   />
                 </div>
               </div>
-              <div className="column is-one-fifth">
+              <div className="column is-one-fifth is-hidden-mobile">
                 <div className="box">
                   <div className="has-text-centered">
                     <h5 className="title is-5  has-text-center">{moment().format('dddd, DD MMMM')}</h5>
