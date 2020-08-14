@@ -36,6 +36,7 @@ Additional features may be added.
 
 ## Wireframe
 This is how we initially envisioned [Stacked News](https://github.com/SteveMobs-Salt/stacked-news/blob/master/wireframe%20main%20page.png).
+
 <img width="769" alt="Screenshot 2020-08-14 at 11 32 59" src="https://user-images.githubusercontent.com/46241840/90235786-250bb500-de22-11ea-9948-abc6ce60fa05.png">
 
 ## Approach
