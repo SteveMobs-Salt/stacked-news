@@ -10,7 +10,7 @@
     "dotenv": "^8.2.0",
     "html-react-parser": "^0.13.0",
     "moment": "^2.27.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "react": "^16.13.1",
     "react-animated-weather": "^4.0.1",
     "react-dom": "^16.13.1",
